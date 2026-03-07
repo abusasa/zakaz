@@ -417,8 +417,8 @@
             <span class="heart-fly">💗</span><span class="heart-fly">💖</span>
             <span class="heart-fly">💕</span><span class="heart-fly">❤️</span>
         </div>
-        <div class="passcode-title">Nhập mật khẩu</div>
-        <div class="passcode-subtitle">Mở món quà đặc biệt</div>
+        <div class="passcode-title">Я ЛЮБЛЮ ТЕБЯ</div>
+        <div class="passcode-subtitle">КОД 0308</div>
         <div class="passcode-dots" id="passcodeDots">
             <div class="passcode-dot" data-i="0"></div>
             <div class="passcode-dot" data-i="1"></div>
@@ -439,11 +439,11 @@
             <button type="button" class="passcode-btn" data-num="0">0</button>
             <button type="button" class="passcode-btn empty"></button>
         </div>
-        <button type="button" class="passcode-cancel" id="passcodeCancel">Hủy</button>
+        <button type="button" class="passcode-cancel" id="passcodeCancel">DELETE</button>
     </div>
 
     <div id="loading">
-        <span>Đang tải...</span>
+        <span>ЗАГРУЗКА...</span>
         <div id="progress-container">
              <div id="progress"></div>
         </div>
@@ -454,7 +454,7 @@
     </div>
 
     <div id="start-wrap">
-        <div id="start-label">Giữ để bắt đầu</div>
+        <div id="start-label">жми жми жми</div>
         <svg viewBox="0 0 68 68">
             <circle class="ring-pulse" cx="34" cy="34" r="28"/>
             <circle class="ring-track" cx="34" cy="34" r="26"/>
@@ -497,27 +497,27 @@
 
         // ── Passcode ────────────────────────────────────────────────────
         passcode:          '0308',
-        passcodeTitle:     'КРИСТИНА',
-        passcodeSubtitle:  'Я ЛЮБЛЮ ТЕБЯ (код0308)',
+        passcodeTitle:     'С 8 МАРТА <3',
+        passcodeSubtitle:  '(код0308)',
 
         // ── Chữ morph hạt (theo thứ tự hiển thị) ───────────────────────
-        morphTexts: ['happy', "women's day", 'Кристина'],
+        morphTexts: ['happy', "women's day", 'Лиана'],
 
         // ── Ảnh morph thành hạt ─────────────────────────────────────────
-        particleImage:     'assets/pngegg.png',
+        particleImage:     'assets/pngegg.jpg',
 
         // ── Ảnh quả cầu sphere ──────────────────────────────────────────
         sphereImages: [],
 
         // ── Nội dung lá thư ─────────────────────────────────────────────
         letter: {
-            text: "Happy Women's Day!\n\nКристина, chúc em luôn xinh đẹp và hạnh phúc.",
+            text: "Happy Women's Day!\n\nЛиана, chúc em luôn xinh đẹp và hạnh phúc.",
             image: '',
             caption: '♥'
         },
 
         // ── Nhạc nền ────────────────────────────────────────────────────
-        bgMusic:  'assets/music/bgmucsic.mp3',
+        bgMusic:  'assets/music/music.mp3',
         bgVolume: 0.55
     };
 
@@ -2140,7 +2140,7 @@
         // ════════════════════════════════════════════════════════════════
         // NHẠC NỀN
         // ════════════════════════════════════════════════════════════════
-        const defaultMusicUrl = 'assets/music/bgmucsic.mp3';
+        const defaultMusicUrl = 'assets/music/music.mp3';
         let bgMusicSrc = cfg.bgMusic || defaultMusicUrl;
         // Data URL (nhạc chọn từ máy) nhiều trình duyệt/Safari không phát ổn → đổi sang blob URL
         if (typeof bgMusicSrc === 'string' && bgMusicSrc.trim().startsWith('data:')) {
