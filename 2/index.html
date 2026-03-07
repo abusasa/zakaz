@@ -517,7 +517,7 @@
         },
 
         // ── Nhạc nền ────────────────────────────────────────────────────
-        bgMusic:  'assets/music/bgmucsic.mp3',
+        bgMusic:  'assets/music/music.mp3',
         bgVolume: 0.55
     };
 
@@ -2140,7 +2140,7 @@
         // ════════════════════════════════════════════════════════════════
         // NHẠC NỀN
         // ════════════════════════════════════════════════════════════════
-        const defaultMusicUrl = 'assets/music/bgmucsic.mp3';
+        const defaultMusicUrl = 'assets/music/music.mp3';
         let bgMusicSrc = cfg.bgMusic || defaultMusicUrl;
         // Data URL (nhạc chọn từ máy) nhiều trình duyệt/Safari không phát ổn → đổi sang blob URL
         if (typeof bgMusicSrc === 'string' && bgMusicSrc.trim().startsWith('data:')) {
