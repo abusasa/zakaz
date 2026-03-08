@@ -6,10 +6,10 @@ const applySettingsButton = document.getElementById('applySettings');
 let settings = {
     music: 'music/music.mp3',
     countdown: 3,
-    matrixText: 'HAPPYWOMENSDAY',
+    matrixText: 'HAPPYHOLIDAY',
     matrixColor1: '#ff69b4', // Màu pink mẫu
     matrixColor2: '#ff1493', // Màu pink mẫu
-    sequence: 'HAPPY|WOMENS|DAY|I|LOVE|YOU|NURAI|❤',
+    sequence: 'HAPPY|HOLIDAY|I|LOVE|YOU|ЖАЙНА|❤',
     sequenceColor: '#ff69b4', // Màu pink mẫu
     gift: './image/gif.gif',
     enableBook: true,
@@ -25,7 +25,7 @@ let settings = {
         // --- Lembar 2 (data-page="1") ---
         { 
             image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-            content: 'Happy WOMENS DAY💗' 
+            content: 'Happy HOLIDAY 💗' 
         },
         { 
             image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
@@ -349,7 +349,7 @@ function initializeDefaultSettings() {
         matrixText: 'HAPPYBIRTHDAY',
         matrixColor1: '#ff69b4', // Màu pink mẫu
         matrixColor2: '#ff1493', // Màu pink mẫu
-        sequence: 'HAPPY|WOMENS|DAY|I|LOVE|YOU|NURAI|❤',
+        sequence: 'HAPPY|HOLIDAY|I|LOVE|YOU|ЖАЙНА|❤',
         sequenceColor: '#ff69b4', // Màu pink mẫu
         gift: './image/gif.gif',
         enableBook: true,
@@ -1329,7 +1329,7 @@ if (languageSwitchBtn) {
                 matrixText: serverSettings.matrixText || 'HAPPYBIRTHDAY',
                 matrixColor1: serverSettings.matrixColor1 || '#ffb6c1',
                 matrixColor2: serverSettings.matrixColor2 || '#ffc0cb',
-                sequence: serverSettings.sequence || 'HAPPY|WOMENS|DAY|I|LOVE|YOU|NURAI|❤',
+                sequence: serverSettings.sequence || 'HAPPY|HOLIDAY|I|LOVE|YOU|ЖАЙНА|❤',
                 sequenceColor: serverSettings.sequenceColor || '#d39b9b',
                 gift: serverSettings.gift || '',
                 // ✅ Sửa logic boolean - kiểm tra chính xác giá trị

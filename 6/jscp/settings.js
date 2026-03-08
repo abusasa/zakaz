@@ -346,10 +346,10 @@ function initializeDefaultSettings() {
     window.settings = {
         music: './music/music.mp3',
         countdown: 3,
-        matrixText: 'HAPPYBIRTHDAY',
+        matrixText: 'HAPPYWOMENTSDAY',
         matrixColor1: '#ff69b4', // Màu pink mẫu
         matrixColor2: '#ff1493', // Màu pink mẫu
-        sequence: 'HAPPY|HOLIDAY|I|LOVE|YOU|ЖАЙНА|❤',
+        sequence: 'HAPPY|WOMENS|DAY|I|LOVE|YOU|ЖАЙНА|❤',
         sequenceColor: '#ff69b4', // Màu pink mẫu
         gift: './image/gif.gif',
         enableBook: true,
@@ -1326,10 +1326,10 @@ if (languageSwitchBtn) {
             window.settings = {
                 music: serverSettings.music || './music/happybirtday_uia.mp3',
                 countdown: serverSettings.countdown || 3,
-                matrixText: serverSettings.matrixText || 'HAPPYBIRTHDAY',
+                matrixText: serverSettings.matrixText || 'HAPPYWOMENSDAY',
                 matrixColor1: serverSettings.matrixColor1 || '#ffb6c1',
                 matrixColor2: serverSettings.matrixColor2 || '#ffc0cb',
-                sequence: serverSettings.sequence || 'HAPPY|HOLIDAY|I|LOVE|YOU|ЖАЙНА|❤',
+                sequence: serverSettings.sequence || 'HAPPY|WOMENS|DAY|I|LOVE|YOU|ЖАЙНА|❤',
                 sequenceColor: serverSettings.sequenceColor || '#d39b9b',
                 gift: serverSettings.gift || '',
                 // ✅ Sửa logic boolean - kiểm tra chính xác giá trị
