@@ -4,14 +4,14 @@ const closeModal = document.querySelector('.close');
 let pages = [];
 const applySettingsButton = document.getElementById('applySettings');
 let settings = {
-    music: 'music/hbdmusic1.mp3',
+    music: 'music/music.mp3',
     countdown: 3,
-    matrixText: 'HAPPYBIRTHDAY',
+    matrixText: 'HAPPYWOMENSDAY',
     matrixColor1: '#ff69b4', // Màu pink mẫu
     matrixColor2: '#ff1493', // Màu pink mẫu
-    sequence: 'HAPPY|BIRTHDAY|TO|ANITA|❤',
+    sequence: 'HAPPY|WOMENS|DAY|I|LOVE|YOU|❤',
     sequenceColor: '#ff69b4', // Màu pink mẫu
-    gift: './image/happy3.gif',
+    gift: './image/gif.gif',
     enableBook: true,
     pages: [
         // --- Lembar 1 (data-page="0") ---
@@ -25,7 +25,7 @@ let settings = {
         // --- Lembar 2 (data-page="1") ---
         { 
             image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-            content: 'Happy Birthday Sayang 💗' 
+            content: 'Happy WOMENS DAY💗' 
         },
         { 
             image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
@@ -344,14 +344,14 @@ function resetWebsiteState() {
 function initializeDefaultSettings() {
 
     window.settings = {
-        music: './music/hbdmusic1.mp3',
+        music: './music/music.mp3',
         countdown: 3,
         matrixText: 'HAPPYBIRTHDAY',
         matrixColor1: '#ff69b4', // Màu pink mẫu
         matrixColor2: '#ff1493', // Màu pink mẫu
-        sequence: 'HAPPY|BIRTHDAY|TO|ANITA|❤',
+        sequence: 'HAPPY|WOMENS|DAY|I|LOVE|YOU|❤',
         sequenceColor: '#ff69b4', // Màu pink mẫu
-        gift: './image/happy3.gif',
+        gift: './image/gif.gif',
         enableBook: true,
         enableHeart: true,
         isSave: false,  

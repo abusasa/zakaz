@@ -1,6 +1,139 @@
 const translations = {
+    ru: {
+        title: "Подарок для тебя 🎁",
+        description: "Прекрасный подарок ждёт тебя! Нажми, чтобы узнать особое пожелание!",
+        login: "Войти через Google",
+        logout: "Выход",
+        settings: "⚙️ Настройки Сайта",
+        music: "🎵 Настройки Звука",
+        backgroundMusic: "Фоновая музыка:",
+        countdown: "⏰ Настройки Времени",
+        countdownTime: "Время обратного отсчёта:",
+        matrix: "🌧️ Настройки Эффекта Матрица",
+        matrixText: "love you❤",
+        matrixColor1: "Цвет матрицы 1:",
+        matrixColor2: "Цвет матрицы 2:",
+        sequence: "✨ Настройки Основного Текста",
+        sequenceText: "Содержимое основного текста:",
+        sequenceColor: "Цвет основного текста:",
+        gift: "🎁 Настройки Анимированного Изображения",
+        giftImage: "Анимированное изображение (опционально):",
+        enableBook: "Показывать книгу:",
+        book: "📖 Настройки Страниц Книги",
+        enableHeart: "Показывать эффект сердца:",
+        note: "⏳ Примечание: Сайт действует только 7 дней, поэтому не создавайте его слишком рано!",
+        follow: "🥰 Подпишись на меня, чтобы получить самые новые сайты!",
+        apply: "🎉 Применить Настройки",
+        copyright: 'Сайт создан тиктокером: <a href="https://www.tiktok.com/@iamtritoan?is_from_webapp=1&sender_device=pc" target="_blank"> @iamtritoan</a>',
+        fullscreen: "Полный экран",
+        // ...add more keys as needed...
+        pricingTitle: "Таблица Цен",
+        voucher: "Скидочный купон:",
+        tip: "💸 Чаевые автору:",
+        total: "Итого:",
+        createWebsite: "🎉 Создать Сайт",
+        payAndCreate: "💳 Оплатить и Создать Сайт",
+        defaultConfig: "🎉 Использовать стандартную конфигурацию - БЕСПЛАТНО!",
+        customMusic: "Пользовательская фоновая музыка",
+        book: "Памятная книга",
+        extraPage: "Дополнительная страница",
+        heartEffect: "Эффект сердца (в книге)",
+        tipAuthor: "Чаевые автору",
+        voucherApplied: "✅ Купон применён: {code} (-{discount}%)",
+        loadingVoucher: "Загрузка купонов...",
+        noVoucher: "У вас нет купонов!",
+        needLoginVoucher: "Вам нужно войти, чтобы увидеть купоны!",
+        cannotLoadVoucher: "Не удалось загрузить купоны!",
+        copyLink: "📋 Копировать Ссылку",
+        viewWebsite: "🔗 Посмотреть Сайт",
+        close: "✖ Закрыть",
+        createSuccess: "🎉 Сайт успешно создан!",
+        price: "Цена:",
+        shareLink: "Ссылка для поделиться:",
+        copySuccess: "Ссылка скопирована!",
+        needLogin: "❌ Вам нужно войти, чтобы создать сайт!",
+        minPay: "❌ Минимальная сумма платежа - 10,000 VND!",
+        error: "❌ Произошла ошибка!",
+        invalidPage: "❌ Неверная структура страницы! Всего {pages} страниц. Пожалуйста, добавьте или удалите 1 страницу для корректной структуры.",
+        uploading: "📤 Загрузка изображений книги...",
+        creating: "🌐 Создание сайта...",
+        creatingProduct: "📦 Создание продукта...",
+        applyingVoucher: "🎫 Применение купона...",
+        applyVoucherSuccess: "✅ Купон успешно применён!",
+        applyVoucherFail: "⚠️ Ошибка купона, продолжение с исходной ценой",
+        cannotCreate: "Не удалось создать сайт",
+        cannotCreateProduct: "Ошибка при создании продукта",
+        cannotApplyVoucher: "Ошибка применения купона!",
+        cannotPay: "Ошибка платежа: ",
+        paymentRedirect: "🔄 Перенаправление на страницу оплаты...",
+        free: "БЕСПЛАТНО",
+        thanks: "Спасибо вам огромное! Если вам нравится этот продукт, подпишитесь на мой канал TikTok <b>тиктокер</b>, чтобы я был мотивирован создавать больше!",
+        tiktokBtn: "🥰 Посмотреть канал TikTok",
+        heartQr: "❤️ Создать QR сердца",
+        heartQrCopy: "✅ Ссылка QR сердца скопирована!",
+        copyShare: "📋 Копировать Ссылку",
+        copied: "✅ Скопировано!",
+        copyToClipboard: "📋 Ссылка скопирована в буфер обмена!",
+        copyFail: "❌ Не удалось скопировать ссылку!",
+
+        //
+        validCoverOnly: "✅ Корректно (только обложка)",
+        validCoverAndPairs: "✅ Корректно (обложка + пары страниц)",
+        invalidMissingPage: "❌ Некорректно (не хватает 1 страницы для пары)",
+        bookPageInfo: "Информация о страницах книги:",
+        totalPages: "Всего страниц",
+        status: "Статус",
+        structure: "Структура",
+        coverOnly: "Только обложка",
+        coverAndPairs: "Обложка (1) + {pairs} пар страниц{extra}",
+        plusOneExtra: " + 1 дополнительная страница",
+        pageTitleCover: "Страница {num} (Обложка)",
+        pageTitle: "Страница {num}",
+        imageLabel: "Изображение:",
+        coverPlaceholder: "Обложка Книги",
+        pagePlaceholder: "Страница {num}",
+        noImageAlt: "Нет изображения - {placeholder}",
+        contentLabel: "Содержимое:",
+        contentPlaceholder: "Введите содержимое для страницы {num}",
+        addNewPage: "➕ Добавить Новую Страницу",
+        emptyPage: "Пустая страница",
+        endOfBook: "Конец книги",
+        loading: "Подготавливаем что-то особенное...",
+        waitingIsHappiness: "Хорошие вещи требуют времени.",
+        invalidPageStructure: "Неверная структура страницы!",
+        currentPages: "Всего {total} страниц.",
+        bookStructureGuide: "Требуемая структура книги:\n- Страница 1: Обложка\n- С страницы 2: Пары страниц (2-3, 4-5, 6-7...)",
+        pleaseAddOrRemovePage: "Пожалуйста, добавьте или удалите 1 страницу для создания корректной структуры.",
+        fullscreenNotSupported: "Ваш браузер не поддерживает полноэкранный режим!",
+        noteSequence: "Примечание: Разделяйте слова символом | и не делайте строки слишком длинными",
+        noteExpire: "⏳ <b>Примечание:</b> Сайт действует только <b>30 дней</b>, поэтому не создавайте его слишком рано!",
+        followNote: "🥰 Пожалуйста, <a href=\"https://www.tiktok.com/@iamtritoan?is_from_webapp=1&sender_device=pc\" target=\"_blank\" style=\"color:#ff0050;font-weight:bold;text-decoration:underline;\">подпишитесь на меня</a> для получения самых свежих сайтов!",
+        on: "Включить",
+        off: "Выключить",
+        sec3: "3 секунды",
+        sec5: "5 секунд",
+        sec10: "10 секунд",
+        noGif: "Нет",
+        notVietnamWarning: 'При возникновении проблем обратитесь ко мне в TikTok<a href="https://www.tiktok.com/@iamtritoan?is_from_webapp=1&sender_device=pc" target="_blank" style="color:#ff0050;font-weight:bold;text-decoration:underline;"> @iamtritoan</a> для поддержки.',
+        isSave: "Сохранить QR навсегда:",
+        saveForever: "навсегда",
+        saveForeverPrice: "(Добавить 20,000đ)",
+        thirtyDays: "30 дней",
+        expireText: "Срок действия",
+        colorTheme: "Выберите цвет:",
+        settingsHint: "нажмите здесь, чтобы настроить параметры",
+        pinkTheme: "Сладкий розовый",
+        blueTheme: "Прохладный синий",
+        purpleTheme: "Мечтательный фиолетовый",
+        customTheme: "Пользовательский цвет",
+        paymentMethod: "Способ оплаты",
+        bankPayment: "Банковский перевод",
+        bankPaymentDesc: "Только для пользователей Вьетнама",
+        paypalPayment: "Кошелёк PayPal",
+        paypalPaymentDesc: "Для международных пользователей",
+    },
     vi: {
-        title: "Made For Anita 🎁",
+        title: "Made For You 🎁",
         description: "Một món quà đầy yêu thương đang chờ bạn khám phá! Nhấn để xem lời chúc đặc biệt!",
         login: "Đăng nhập bằng Google",
         logout: "Đăng xuất",
@@ -303,32 +436,34 @@ function setLanguage(lang) {
     // ...bổ sung nếu cần...
 }
 
-// Lưu ngôn ngữ vào localStorage
+// Сохранить язык в localStorage
 function switchLanguage() {
-    const current = localStorage.getItem('lang') || 'vi';
-    const next = current === 'vi' ? 'en' : 'vi';
+    const current = localStorage.getItem('lang') || 'ru';
+    const langList = ['ru', 'vi', 'en'];
+    const currentIndex = langList.indexOf(current);
+    const next = langList[(currentIndex + 1) % langList.length];
     localStorage.setItem('lang', next);
     setLanguage(next);
-    // Cập nhật lại UI động (nếu có)
+    // Обновить UI (если есть)
     if (window.pricingCalculator) {
         window.pricingCalculator.updatePricing();
     }
-    // Cập nhật hiển thị hạn sử dụng khi đổi ngôn ngữ
+    // Обновить отображение срока действия при смене языка
     if (typeof updateExpireDateDisplay === 'function') {
         updateExpireDateDisplay();
     }
 }
 
-// Khởi tạo ngôn ngữ khi load trang
+// Инициализировать язык при загрузке страницы
 document.addEventListener('DOMContentLoaded', () => {
-    const lang = localStorage.getItem('lang') || 'vi';
+    const lang = localStorage.getItem('lang') || 'ru';
     setLanguage(lang);
-    // Gắn sự kiện cho nút chuyển ngôn ngữ
+    // Привязать событие к кнопке переключения языка
     document.getElementById('langSwitchBtn').onclick = switchLanguage;
 });
 
 function t(key, vars = {}) {
-    const lang = localStorage.getItem('lang') || 'vi';
+    const lang = localStorage.getItem('lang') || 'ru';
     let str = (translations[lang] && translations[lang][key]) || key;
     Object.keys(vars).forEach(k => {
         str = str.replace(`{${k}}`, vars[k]);
