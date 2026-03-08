@@ -6,10 +6,10 @@ const applySettingsButton = document.getElementById('applySettings');
 let settings = {
     music: 'music/music.mp3',
     countdown: 3,
-    matrixText: 'HAPPYHOLIDAY',
+    matrixText: 'HAPPYWOMENTSDAY',
     matrixColor1: '#ff69b4', // Màu pink mẫu
     matrixColor2: '#ff1493', // Màu pink mẫu
-    sequence: 'HAPPY|HOLIDAY|I|LOVE|YOU|ЖАЙНА|❤',
+    sequence: 'HAPPY|WOMENS|DAY|I|LOVE|YOU|ЖАЙНА|❤',
     sequenceColor: '#ff69b4', // Màu pink mẫu
     gift: './image/gif.gif',
     enableBook: true,
@@ -25,7 +25,7 @@ let settings = {
         // --- Lembar 2 (data-page="1") ---
         { 
             image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-            content: 'Happy HOLIDAY💗' 
+            content: 'Happy WOMENS DAY💗' 
         },
         { 
             image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
