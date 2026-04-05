@@ -6,10 +6,10 @@ const applySettingsButton = document.getElementById('applySettings');
 let settings = {
     music: 'music/music.mp3',
     countdown: 3,
-    matrixText: 'LOVELOVE',
+    matrixText: 'HAPPYBIRTHDAY',
     matrixColor1: '#ff69b4', // Màu pink mẫu
     matrixColor2: '#ff1493', // Màu pink mẫu
-    sequence: 'Я ТЕБЯ ЛЮБЛЮ|I LOVE YOU| ЛЕРА!❤',
+    sequence: 'С ДНЁМ РОЖДЕНИЯ|HAPPY BIRTHDAY| ЛЕРА!❤',
     sequenceColor: '#ff69b4', // Màu pink mẫu
     gift: './image/gif.gif',
     enableBook: true,
@@ -346,10 +346,10 @@ function initializeDefaultSettings() {
     window.settings = {
         music: './music/music.mp3',
         countdown: 3,
-        matrixText: 'LOVELOVE',
+        matrixText: 'HAPPYBIRTHDAY',
         matrixColor1: '#ff69b4', // Màu pink mẫu
         matrixColor2: '#ff1493', // Màu pink mẫu
-        sequence: 'Я ТЕБЯ ЛЮБЛЮ|I LOVE YOU| ЛЕРА!❤',
+        sequence: 'С ДНЁМ РОЖДЕНИЯ|HAPPY BIRTHDAY| ЛЕРА!❤',
         sequenceColor: '#ff69b4', // Màu pink mẫu
         gift: './image/gif.gif',
         enableBook: true,
