@@ -368,7 +368,7 @@ function initializeDefaultSettings() {
             // --- Lembar 2 (data-page="1") ---
             { 
                 image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-                content: 'Я тебя люблю, и желаю чтобы ты всегда была счастлива! Зумрат 💗' 
+                content: 'Я тебя люблю, и желаю чтобы ты всегда была счастлива! Лера 💗' 
             },
             { 
                 image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
@@ -377,7 +377,7 @@ function initializeDefaultSettings() {
             // --- Lembar 3 (data-page="2") ---
             { 
                 image: './image/photos/b5.png', // Menggantikan tbutvj.png (Index 4)
-                content: 'Чтобы твоя жизнь была наполнена радостью, любовью и успехами. С праздником, дорогая!' 
+                content: 'Чтобы твоя жизнь была наполнена радостью, любовью и успехамиик, дорогая!' 
             }
         ]
     };
