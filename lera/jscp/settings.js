@@ -368,7 +368,7 @@ function initializeDefaultSettings() {
             // --- Lembar 2 (data-page="1") ---
             { 
                 image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-                content: 'Я тебя люблю, и желаю чтобы ты всегда была счастлива! Лера 💗' 
+                content: 'С днем рождения тебя. Пусть твоя жизнь будет такой же красивой и яркой, как этот вечерний свет вокруг тебя Лера❤️' 
             },
             { 
                 image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
@@ -377,7 +377,7 @@ function initializeDefaultSettings() {
             // --- Lembar 3 (data-page="2") ---
             { 
                 image: './image/photos/b5.png', // Menggantikan tbutvj.png (Index 4)
-                content: 'Чтобы твоя жизнь была наполнена радостью, любовью и успехамиик, дорогая!' 
+                content: 'Пусть сбываются мечты, появляются новые приключения и всегда рядом будут люди, которые делают тебя счастливой. Ты очень особенная 🌙' 
             }
         ]
     };
