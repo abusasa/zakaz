@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Будешь ли ты моей валентинкой?</title>
+    <link rel="stylesheet" href="css/valentine.css" />
+    <link rel="stylesheet" href="css/lastpage.css" />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Экран с вопросом валентинки -->
+    <div id="valentineScreen">
+      <div id="valentineQuestion"><b>Проситишь своего парня?</b></div>
+      <button class="answerButton" id="yesButton">Да</button>
+      <button class="answerButton" id="noButton">Неа</button>
+      <br />
+      <img src="please.png" height="498px" width="150px" alt="кот задаёт вопрос" class="responsive" />
+    </div>
+
+    <!-- Экран спасибо -->
+    <div id="thankyouScreen" class="hidden">
+      <div id="thankyou"><b>Спасибо!</b></div>
+      <img height="300px" id="rizz" src="thanks.png" alt="красивый парень" class="responsive" />
+      <br />
+      <audio controls autoplay loop>
+        <source src="congratulations.mp3" type="audio/mpeg" />
+        Ваш браузер не поддерживает аудиоэлемент.
+      </audio>
+      <h1>Не уходи!</h1>
+      <button class="button" onclick="location.href='date.html'">
+        Нажми на меня хехеехе... 
+      </button>
+    </div>
+
+    <script>
+      // Кнопка "Не хочу" увеличивает размер кнопки "Да"
+      document
+        .getElementById("noButton")
+        .addEventListener("click", function () {
+          var yesButton = document.getElementById("yesButton");
+          var currentFontSize = parseInt(
+            window.getComputedStyle(yesButton).fontSize
+          );
+          yesButton.style.fontSize = currentFontSize + 10 + "px";
+        });
+
+      // Кнопка "Да" показывает экран спасибо
+      document
+        .getElementById("yesButton")
+        .addEventListener("click", function () {
+          document.getElementById("valentineScreen").classList.add("hidden");
+          document.getElementById("thankyouScreen").classList.remove("hidden");
+        });
+    </script>
+  </body>
+</html>
