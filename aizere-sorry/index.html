@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Будешь ли ты моей валентинкой?</title>
+    <title>Простишь козла?</title>
     <link rel="stylesheet" href="css/valentine.css" />
     <link rel="stylesheet" href="css/lastpage.css" />
     <style>
@@ -15,7 +15,7 @@
   <body>
     <!-- Экран с вопросом валентинки -->
     <div id="valentineScreen">
-      <div id="valentineQuestion"><b>Проситишь своего парня?</b></div>
+      <div id="valentineQuestion"><b>Проситишь своего парня пожалуйста??</b></div>
       <button class="answerButton" id="yesButton">Да</button>
       <button class="answerButton" id="noButton">Неа</button>
       <br />
@@ -24,10 +24,10 @@
 
     <!-- Экран спасибо -->
     <div id="thankyouScreen" class="hidden">
-      <div id="thankyou"><b>Спасибо!</b></div>
+      <div id="thankyou"><b>Спасибо❤️❤️!! моя королева вы проста самая лучшая, я так вам благодарен боже❤️❤️!</b></div>
       <img height="300px" id="rizz" src="thanks.png" alt="красивый парень" class="responsive" />
       <br />
-      <audio controls autoplay loop>
+      <audio id="celebrationAudio" controls loop>
         <source src="congratulations.mp3" type="audio/mpeg" />
         Ваш браузер не поддерживает аудиоэлемент.
       </audio>
@@ -45,12 +45,13 @@
           yesButton.style.fontSize = currentFontSize + 10 + "px";
         });
 
-      // Кнопка "Да" показывает экран спасибо
+      // Кнопка "Да" показывает экран спасибо и включает музыку
       document
         .getElementById("yesButton")
         .addEventListener("click", function () {
           document.getElementById("valentineScreen").classList.add("hidden");
           document.getElementById("thankyouScreen").classList.remove("hidden");
+          document.getElementById("celebrationAudio").play();
         });
     </script>
   </body>
