@@ -232,6 +232,56 @@ body {
   cursor: pointer;
 }
 
+/* WATERMARK: remove this block together with the watermark element in index.html */
+.watermark-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0.12;
+  color: #ff0000;
+  font-size: 14vw;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  line-height: 0.85;
+  text-align: center;
+  padding: 0 5vw;
+  width: 120%;
+  height: 120%;
+  white-space: pre-wrap;
+  text-shadow: 0 0 30px rgba(255, 0, 0, 0.3);
+}
+
+.watermark-overlay-top,
+.watermark-overlay-bottom,
+.watermark-overlay-center {
+  transform: rotate(-25deg) scale(1.05);
+}
+
+.watermark-overlay-top {
+  align-items: flex-start;
+  padding-top: 10vh;
+}
+
+.watermark-overlay-center {
+  align-items: center;
+}
+
+.watermark-overlay-bottom {
+  align-items: flex-end;
+  padding-bottom: 10vh;
+}
+
+@media screen and (max-width: 800px) {
+  .watermark-overlay {
+    font-size: 18vw;
+    letter-spacing: 0.15em;
+  }
+}
+
 /* Media Queries */
 @media screen and (max-height: 1000px) {
   .six .hat {
