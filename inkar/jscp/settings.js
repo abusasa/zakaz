@@ -349,7 +349,7 @@ function initializeDefaultSettings() {
         matrixText: 'LOVELOVE',
         matrixColor1: '#ff69b4', // Màu pink mẫu
         matrixColor2: '#ff1493', // Màu pink mẫu
-        sequence: 'Инкар|пожалуйста|иди нахуй!❤',
+        sequence: 'Инкар|я тебя|люблю!❤',
         sequenceColor: '#ff69b4', // Màu pink mẫu
         gift: './image/gif.gif',
         enableBook: true,
