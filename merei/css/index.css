@@ -330,7 +330,7 @@
   }
 
   .book {
-      width: 600px;
+      width: 700px;
       height: 400px;
       position: relative;
       transform-style: preserve-3d;
@@ -345,7 +345,7 @@
   }
 
   .page {
-      width: 300px;
+      width: 350px;
       height: 400px;
       position: absolute;
       top: 0;
@@ -569,14 +569,14 @@
       }
 
       .book {
-          width: 300px;
+          width: 350px;
           height: 200px;
           transform: scale(0.7);
           margin-top: 0px;
       }
 
       .page {
-          width: 150px;
+          width: 175px;
           height: 200px;
       }
 
