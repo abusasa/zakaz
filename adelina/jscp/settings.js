@@ -349,7 +349,7 @@ function initializeDefaultSettings() {
         matrixText: 'LOVELOVE',
         matrixColor1: '#ff69b4', // Màu pink mẫu
         matrixColor2: '#ff1493', // Màu pink mẫu
-        sequence: 'HAPPY|BIRTHDAY|АДЕЛИНА!|❤',
+        sequence: 'HAPPY BIRTHDAY|ПРОСТИ АДЕЛИНА|Я ИЗМЕНИЛ ТЕБЕ❤',
         sequenceColor: '#ff69b4', // Màu pink mẫu
         gift: './image/gif.gif',
         enableBook: true,
