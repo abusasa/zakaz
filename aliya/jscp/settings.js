@@ -349,7 +349,7 @@ function initializeDefaultSettings() {
         matrixText: 'LOVELOVE',
         matrixColor1: '#ff69b4', // Màu pink mẫu
         matrixColor2: '#ff1493', // Màu pink mẫu
-        sequence: 'Мерей|пожалуйста|иди нахуй!❤',
+        sequence: 'HAPPY|BIRTHDAY|ALIYA❤',
         sequenceColor: '#ff69b4', // Màu pink mẫu
         gift: './image/gif.gif',
         enableBook: true,
@@ -368,7 +368,7 @@ function initializeDefaultSettings() {
             // --- Lembar 2 (data-page="1") ---
             { 
                 image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-                content: 'ешак' 
+                content: 'С днём рождения! 🎉 Желаю счастья, здоровья, удачи и исполнения всех желаний! 🥳' 
             },
             { 
                 image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
@@ -377,7 +377,7 @@ function initializeDefaultSettings() {
             // --- Lembar 3 (data-page="2") ---
             { 
                 image: './image/photos/b5.png', // Menggantikan tbutvj.png (Index 4)
-                content: 'ешак' 
+                content: 'Поздравляю! Пусть в жизни будет больше поводов улыбаться, рядом — любимые люди, а впереди — только хорошее! 🎂✨' 
             }
         ]
     };
