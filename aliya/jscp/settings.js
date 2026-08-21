@@ -41,6 +41,21 @@ let settings = {
         },
         { 
             image: './image/photos/b6.png',
+            content: 'May every new day bring you joy, inspiration, and beautiful memories! 💖'
+        },
+        {
+            image: '',
+        },
+        {
+            image: '',
+            content: 'You deserve all the happiness, love, and success in the world! 🌸'
+        },
+        {
+            image: '',
+        },
+        {
+            image: '',
+            content: 'Keep shining, keep smiling, and enjoy every wonderful moment ahead! ✨'
         }
     ],
     enableBook: true,
@@ -335,6 +350,9 @@ function resetWebsiteState() {
     if (window.settings && window.settings.pages) {
         pages = window.settings.pages;
         createPages();
+        if (typeof showPageContent === 'function') {
+            showPageContent();
+        }
     }
 
     // Reset and restart the sequence với màu mới
@@ -374,23 +392,24 @@ function initializeDefaultSettings() {
             // --- Lembar 2 (data-page="1") ---
             { 
                 image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-                content: 'Happy Birthday! 🎉 Wishing you happiness, good health, success, and the fulfillment of all your dreams! 🥳' 
+                content: 'Happy birthday to the girl who makes my whole world softer and brighter. Love you endlessly. ✨' 
             },
             { 
                 image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
             },
             { 
                 image: './image/photos/b4.png',
+                content: 'Still my favorite notification of the day. Happy birthday, gorgeous! 💌'
             },
 
             // --- Lembar 3 (data-page="2") ---
             { 
-                image: './image/photos/b5.png', // Menggantikan tbutvj.png (Index 4)
-                content: 'Congratulations! May your life be filled with more reasons to smile, loved ones by your side, and wonderful things ahead! 🎂✨' 
+                image: './image/photos/b5.png', // Menggantikan tbutvj.png (Index 4)' 
             },
             { 
                 image: './image/photos/b6.png',
-            }
+                content: 'Certified prettiest girl in the room, today and every day. 👑'
+            },
         ]
     };
 
