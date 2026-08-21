@@ -25,7 +25,7 @@ let settings = {
         // --- Lembar 2 (data-page="1") ---
         { 
             image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-            content: 'С днём рождения! 🎉 Желаю счастья, здоровья, удачи и исполнения всех желаний! 🥳' 
+            content: 'Happy Birthday! 🎉 Wishing you happiness, good health, success, and the fulfillment of all your dreams! 🥳' 
         },
         { 
             image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
@@ -37,7 +37,7 @@ let settings = {
         // --- Lembar 3 (data-page="2") ---
         { 
             image: './image/photos/b5.png',
-            content: 'Поздравляю! Пусть в жизни будет больше поводов улыбаться, рядом — любимые люди, а впереди — только хорошее! 🎂✨' 
+            content: 'Congratulations! May your life be filled with more reasons to smile, loved ones by your side, and wonderful things ahead! 🎂✨' 
         },
         { 
             image: './image/photos/b6.png',
@@ -374,7 +374,7 @@ function initializeDefaultSettings() {
             // --- Lembar 2 (data-page="1") ---
             { 
                 image: './image/photos/b2.png', // Menggantikan fjr3qh.png (Index 2)
-                content: 'С днём рождения! 🎉 Желаю счастья, здоровья, удачи и исполнения всех желаний! 🥳' 
+                content: 'Happy Birthday! 🎉 Wishing you happiness, good health, success, and the fulfillment of all your dreams! 🥳' 
             },
             { 
                 image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
@@ -386,7 +386,7 @@ function initializeDefaultSettings() {
             // --- Lembar 3 (data-page="2") ---
             { 
                 image: './image/photos/b5.png', // Menggantikan tbutvj.png (Index 4)
-                content: 'Поздравляю! Пусть в жизни будет больше поводов улыбаться, рядом — любимые люди, а впереди — только хорошее! 🎂✨' 
+                content: 'Congratulations! May your life be filled with more reasons to smile, loved ones by your side, and wonderful things ahead! 🎂✨' 
             },
             { 
                 image: './image/photos/b6.png',
