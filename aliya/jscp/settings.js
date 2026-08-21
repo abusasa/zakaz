@@ -30,11 +30,17 @@ let settings = {
         { 
             image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
         },
+        { 
+            image: './image/photos/b4.png',
+        },
 
         // --- Lembar 3 (data-page="2") ---
         { 
-            image: './image/theend.jpg', // Menggantikan tbutvj.png (Index 4)
+            image: './image/photos/b5.png',
             content: 'Поздравляю! Пусть в жизни будет больше поводов улыбаться, рядом — любимые люди, а впереди — только хорошее! 🎂✨' 
+        },
+        { 
+            image: './image/photos/b6.png',
         }
     ],
     enableBook: true,
@@ -373,11 +379,17 @@ function initializeDefaultSettings() {
             { 
                 image: './image/photos/b3.png', // Menggantikan 8u5tf7.png (Index 3)
             },
+            { 
+                image: './image/photos/b4.png',
+            },
 
             // --- Lembar 3 (data-page="2") ---
             { 
                 image: './image/photos/b5.png', // Menggantikan tbutvj.png (Index 4)
                 content: 'Поздравляю! Пусть в жизни будет больше поводов улыбаться, рядом — любимые люди, а впереди — только хорошее! 🎂✨' 
+            },
+            { 
+                image: './image/photos/b6.png',
             }
         ]
     };
