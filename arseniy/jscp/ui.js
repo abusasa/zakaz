@@ -1082,7 +1082,8 @@ function createHeartPhotoCentered(idx, total) {
     } else {
         photo = document.createElement('div');
         photo.className = 'photo heart-photo-item';
-        photo.innerHTML = '❤️';
+        photo.innerHTML = '💙';
+        photo.style.borderColor = '#00c6ff';
         photo.style.display = 'flex';
         photo.style.alignItems = 'center';
         photo.style.justifyContent = 'center';
@@ -1091,7 +1092,7 @@ function createHeartPhotoCentered(idx, total) {
         photo.style.height = '64px';
         photo.style.borderRadius = '50%';
         photo.style.background = 'rgba(255, 255, 255, 0.95)';
-        photo.style.boxShadow = '0 0 20px rgba(255, 105, 180, 0.9)';
+        photo.style.boxShadow = '0 0 20px rgba(0, 198, 255, 0.9)';
     }
     photo.style.zIndex = '300';
 

@@ -1,4 +1,4 @@
-  html,
+﻿  html,
   body {
       margin: 0px;
       width: 100%;
@@ -148,7 +148,7 @@
       max-width: 650px;
       min-height: 160px;
       max-height: 230px;
-      /* Giữ nguyên để không che book */
+      /* Giб»Ї nguyГЄn Д‘б»ѓ khГґng che book */
       background:
           linear-gradient(145deg, #ffffff 0%, #fefefe 100%),
           radial-gradient(circle at 50% 50%, rgba(255, 192, 203, 0.05) 0%, transparent 60%);
@@ -162,14 +162,14 @@
           inset 0 -1px 0 rgba(255, 192, 203, 0.1);
       backdrop-filter: blur(20px);
 
-      /* Mặc định ẩn */
+      /* Mбє·c Д‘б»‹nh бє©n */
       opacity: 0;
       display: none;
       pointer-events: none;
 
       font-family: 'Crimson Text', serif;
       overflow-y: auto;
-      /* Luôn cho phép scroll */
+      /* LuГґn cho phГ©p scroll */
       scrollbar-width: thin;
       scrollbar-color: rgba(255, 105, 180, 0.3) transparent;
       scroll-behavior: smooth;
@@ -186,12 +186,12 @@
       border: 3px solid transparent;
       /* background-clip: padding-box; */
 
-      /* Animation cho hiệu ứng xuất hiện */
+      /* Animation cho hiб»‡u б»©ng xuбєҐt hiб»‡n */
       transition: all 0.5s ease;
   }
 
   .content-display::after {
-      content: '💕';
+      content: 'рџ’•';
       position: absolute;
       top: 15px;
       right: 20px;
@@ -421,7 +421,7 @@
       box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8), -5px 10px 30px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
   }
 
-  /* Dynamic z-index cho pages - hỗ trợ số lượng trang không giới hạn */
+  /* Dynamic z-index cho pages - hб»— trб»Ј sб»‘ lЖ°б»Јng trang khГґng giб»›i hбєЎn */
   .page {
       z-index: var(--page-z-index, 1);
   }
@@ -430,7 +430,7 @@
       z-index: var(--page-flipped-z-index, 1);
   }
 
-  /* Đảm bảo tất cả pages đều có z-index mặc định */
+  /* ДђбєЈm bбєЈo tбєҐt cбєЈ pages Д‘б»Ѓu cГі z-index mбє·c Д‘б»‹nh */
   .page {
       z-index: var(--page-z-index, 1);
   }
@@ -544,7 +544,7 @@
       height: 120px;
       border-radius: 20px;
       object-fit: cover;
-      box-shadow: 0 0 20px rgba(255, 105, 180, 0.8);
+      box-shadow: 0 0 20px rgba(0, 198, 255, 0.8);
       opacity: 0;
       pointer-events: none;
       border: 5px solid white;
@@ -856,9 +856,9 @@
       transition: border-color 0.2s ease;
       box-sizing: border-box;
       white-space: normal !important;
-      /* Thêm dòng này */
+      /* ThГЄm dГІng nГ y */
       word-wrap: normal !important;
-      /* Thêm dòng này */
+      /* ThГЄm dГІng nГ y */
   }
 
   .modal-content select:focus,
@@ -876,7 +876,7 @@
       font-family: inherit;
       line-height: 1.4;
       white-space: pre-wrap !important;
-      /* Chỉ cho textarea */
+      /* Chб»‰ cho textarea */
   }
 
   /* Page config */
@@ -1050,11 +1050,11 @@
 
       #settingsModal .modal-header {
           position: static !important;
-          /* Không sticky/fixed */
+          /* KhГґng sticky/fixed */
           background: none !important;
-          /* Bỏ background */
+          /* Bб»Џ background */
           padding: 0px 8px !important;
-          /* Giảm padding */
+          /* GiбєЈm padding */
           min-height: 0 !important;
           height: auto !important;
           flex-direction: row !important;
@@ -1066,7 +1066,7 @@
 
       #settingsModal .modal-header h2 {
           display: none !important;
-          /* Ẩn tiêu đề */
+          /* бєЁn tiГЄu Д‘б»Ѓ */
       }
 
       #settingsModal .close {
@@ -1180,7 +1180,7 @@
           border-radius: 6px !important;
       }
 
-      /* Nút thêm trang mới */
+      /* NГєt thГЄm trang mб»›i */
       #pageConfigs>button {
           font-size: 13px !important;
           padding: 7px 14px !important;
@@ -1239,7 +1239,7 @@
           height: 70vh !important;
           overflow-y: auto !important;
           padding-bottom: 0px !important;
-          /* Để không che nút */
+          /* Дђб»ѓ khГґng che nГєt */
           z-index: 10000 !important;
       }
 

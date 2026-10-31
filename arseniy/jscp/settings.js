@@ -9,10 +9,10 @@ let settings = {
     matrixText: 'LOVELOVE',
     // Если клиент захочет синюю тему для парня/мальчика:
     // matrixColor1: '#00c6ff', matrixColor2: '#0072ff', sequenceColor: '#00f0ff',
-    matrixColor1: '#ff69b4',
-    matrixColor2: '#ff1493',
+    matrixColor1: '#00c6ff',
+    matrixColor2: '#0072ff',
     sequence: "Я ТЕБЯ ЛЮБЛЮ|I LOVE YOU|JE T'AIME|АРСЕНИЙ!❤",
-    sequenceColor: '#ff69b4',
+    sequenceColor: '#00e5ff',
     gift: './image/gif.gif',
     enableBook: false,
     pages: [],
@@ -181,9 +181,9 @@ const colorThemes = {
         name: 'Hồng ngọt ngào'
     },
     blue: {
-        matrixColor1: '#87ceeb',
-        matrixColor2: '#4169e1',
-        sequenceColor: '#1e90ff',
+        matrixColor1: '#00c6ff',
+        matrixColor2: '#0072ff',
+        sequenceColor: '#00e5ff',
         name: 'Xanh dương mát mẻ'
     },
     purple: {
@@ -327,15 +327,15 @@ function initializeDefaultSettings() {
         music: './music/music.mp3',
         countdown: 3,
         matrixText: 'LOVELOVE',
-        matrixColor1: '#ff69b4',
-        matrixColor2: '#ff1493',
+        matrixColor1: '#00c6ff',
+        matrixColor2: '#0072ff',
         sequence: "Я ТЕБЯ ЛЮБЛЮ|I LOVE YOU|JE T'AIME|АРСЕНИЙ!❤",
-        sequenceColor: '#ff69b4',
+        sequenceColor: '#00e5ff',
         gift: './image/gif.gif',
         enableBook: false,
         enableHeart: true,
         isSave: false,  
-        colorTheme: 'pink',
+        colorTheme: 'blue',
         pages: []
     };
 
