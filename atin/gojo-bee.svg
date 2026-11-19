@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="280" height="280">
+  <defs>
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4cc" />
+      <stop offset="100%" stop-color="#ffe082" />
+    </radialGradient>
+    <linearGradient id="glassesGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#1e3a8a" />
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1e293b" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <!-- Soft background badge -->
+  <circle cx="160" cy="164" r="136" fill="url(#bgGlow)" stroke="#1e293b" stroke-width="5" filter="url(#softShadow)"/>
+
+  <!-- Little sparkles around -->
+  <path d="M52 80 L56 92 L68 96 L56 100 L52 112 L48 100 L36 96 L48 92 Z" fill="#38bdf8" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M268 74 L271 83 L280 86 L271 89 L268 98 L265 89 L256 86 L265 83 Z" fill="#f43f5e" stroke="#1e293b" stroke-width="2.5" stroke-linejoin="round"/>
+  <circle cx="262" cy="238" r="6" fill="#38bdf8" stroke="#1e293b" stroke-width="2.5"/>
+  <circle cx="58" cy="230" r="5" fill="#fbbf24" stroke="#1e293b" stroke-width="2.5"/>
+
+  <!-- Cute Bee Wings -->
+  <ellipse cx="102" cy="118" rx="36" ry="22" transform="rotate(-28 102 118)" fill="#e0f2fe" fill-opacity="0.9" stroke="#1e293b" stroke-width="4.5"/>
+  <ellipse cx="218" cy="118" rx="36" ry="22" transform="rotate(28 218 118)" fill="#e0f2fe" fill-opacity="0.9" stroke="#1e293b" stroke-width="4.5"/>
+
+  <!-- Stinger at the bottom -->
+  <polygon points="150,264 170,264 160,284" fill="#1e293b" stroke="#1e293b" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- Chubby Bee Body (clipped stripes) -->
+  <clipPath id="beeBodyClip">
+    <rect x="86" y="108" width="148" height="158" rx="74" ry="74"/>
+  </clipPath>
+
+  <rect x="86" y="108" width="148" height="158" rx="74" ry="74" fill="#fbbf24" stroke="#1e293b" stroke-width="5"/>
+
+  <g clip-path="url(#beeBodyClip)">
+    <!-- Bee black stripes -->
+    <rect x="75" y="196" width="170" height="22" fill="#1e293b"/>
+    <rect x="75" y="232" width="170" height="22" fill="#1e293b"/>
+    <!-- Skin face area -->
+    <ellipse cx="160" cy="148" rx="64" ry="44" fill="#ffe4d6" stroke="#1e293b" stroke-width="4.5"/>
+  </g>
+
+  <!-- Re-stroke body outline cleanly -->
+  <rect x="86" y="108" width="148" height="158" rx="74" ry="74" fill="none" stroke="#1e293b" stroke-width="5"/>
+
+  <!-- Tiny Bee Hands holding peace/wave -->
+  <ellipse cx="82" cy="192" rx="13" ry="9" transform="rotate(-20 82 192)" fill="#1e293b"/>
+  <ellipse cx="238" cy="192" rx="13" ry="9" transform="rotate(20 238 192)" fill="#1e293b"/>
+
+  <!--Bee Antennae sticking through hair -->
+  <path d="M136 72 Q122 44 106 50" fill="none" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="104" cy="50" r="7" fill="#1e293b"/>
+  <path d="M184 72 Q198 44 214 50" fill="none" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="216" cy="50" r="7" fill="#1e293b"/>
+
+  <!-- Gojo Spiky White Hair -->
+  <path d="M84 132 
+           L70 106 L94 104 
+           L82 76 L112 86 
+           L114 56 L138 78 
+           L160 48 L182 78 
+           L206 56 L208 86 
+           L238 76 L226 104 
+           L250 106 L236 132
+           Q212 114 188 124
+           L176 112 L160 128 L144 112 L132 124
+           Q108 114 84 132 Z" 
+        fill="#f8fafc" stroke="#1e293b" stroke-width="4.5" stroke-linejoin="round"/>
+
+  <!-- Blush cheeks -->
+  <ellipse cx="114" cy="164" rx="10" ry="5.5" fill="#fb7185" fill-opacity="0.55"/>
+  <ellipse cx="206" cy="164" rx="10" ry="5.5" fill="#fb7185" fill-opacity="0.55"/>
+
+  <!-- Iconic Gojo Round Blue Sunglasses -->
+  <line x1="96" y1="146" x2="108" y2="148" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="224" y1="146" x2="212" y2="148" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="150" y1="149" x2="170" y2="149" stroke="#1e293b" stroke-width="4.5" stroke-linecap="round"/>
+
+  <circle cx="129" cy="149" r="22" fill="url(#glassesGrad)" stroke="#1e293b" stroke-width="4.5"/>
+  <circle cx="191" cy="149" r="22" fill="url(#glassesGrad)" stroke="#1e293b" stroke-width="4.5"/>
+
+  <!-- Six Eyes glints on glasses -->
+  <path d="M117 140 L127 136" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="136" cy="155" r="2.5" fill="#bae6fd"/>
+  <path d="M179 140 L189 136" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="198" cy="155" r="2.5" fill="#bae6fd"/>
+
+  <!-- Smug cute cat-like grin :3 -->
+  <path d="M147 170 Q153.5 177 160 171 Q166.5 177 173 170" fill="none" stroke="#1e293b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
