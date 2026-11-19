@@ -14,7 +14,6 @@
       width: 100vw;
       height: 100vh;
       background: rgba(0, 0, 0, 0.96);
-      display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
@@ -23,7 +22,7 @@
       text-align: center;
       font-family: 'Arial', sans-serif;
       font-size: 18px;
-      display: none;
+      display: none !important;
       transition: background 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -86,6 +85,7 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      height: 100dvh;
       margin: 0;
       font-family: 'Arial', sans-serif;
       overflow: hidden;
@@ -1647,7 +1647,7 @@
   .finale-controls {
       position: fixed;
       left: 50%;
-      bottom: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom, 0px));
       transform: translateX(-50%);
       z-index: 500;
       display: flex;
@@ -1835,6 +1835,90 @@
 
       .finale-lightbox-img {
           max-height: 74vh;
+      }
+  }
+
+  @media screen and (orientation: portrait) and (max-width: 768px) {
+      .content-display {
+          top: calc(58px + env(safe-area-inset-top, 0px));
+          width: 90vw;
+          max-width: 420px;
+          min-height: auto;
+          max-height: 29vh;
+          padding: 14px 18px;
+          border-radius: 16px;
+      }
+
+      .content-display::after {
+          top: 8px;
+          right: 12px;
+          font-size: 16px;
+      }
+
+      .content-display p {
+          font-size: clamp(15px, 4.2vw, 19px);
+          line-height: 1.48;
+      }
+
+      .book-container.show {
+          display: block;
+          opacity: 1;
+          transform: scale(1) translateY(12vh);
+      }
+
+      .book {
+          width: calc(min(44vw, 190px) * 2);
+          height: min(58vw, 250px);
+          margin-top: 0;
+      }
+
+      .page {
+          width: min(44vw, 190px);
+          height: min(58vw, 250px);
+      }
+
+      .music-control {
+          top: calc(12px + env(safe-area-inset-top, 0px));
+          right: 12px;
+          width: 36px;
+          height: 36px;
+          font-size: 15px;
+      }
+
+      .finale-card-face {
+          border-radius: 11px;
+          border-width: 2px;
+      }
+
+      .finale-caption-top {
+          font-size: clamp(16px, 4.8vw, 24px);
+      }
+
+      .finale-caption-bottom {
+          font-size: clamp(20px, 6vw, 30px);
+      }
+
+      .finale-controls {
+          bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+      }
+
+      .finale-lightbox-img {
+          max-width: 90vw;
+          max-height: 70vh;
+      }
+
+      .finale-lightbox-nav {
+          width: 38px;
+          height: 38px;
+          font-size: 22px;
+      }
+
+      .finale-lightbox-nav.prev {
+          left: 10px;
+      }
+
+      .finale-lightbox-nav.next {
+          right: 10px;
       }
   }
 

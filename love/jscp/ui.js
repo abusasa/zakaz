@@ -1,5 +1,5 @@
 
-let isLandscape = false;
+let isLandscape = true;
 let matrixInterval = null;
 const confettiPool = [];
 const maxConfetti = 50;
@@ -43,70 +43,25 @@ function returnConfettiToPool(confetti) {
 
 
 function checkOrientation() {
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     const orientationLock = document.getElementById('orientation-lock');
     const matrixCanvas = document.getElementById('matrix-rain');
     const mainCanvas = document.querySelector('.canvas');
-    const bookContainer = document.querySelector('.book-container');
-    const book = document.getElementById('book');
 
-    if (!isMobile) {
-        isLandscape = true;
-        orientationLock.style.display = 'none';
-        matrixCanvas.style.display = 'block';
-        mainCanvas.style.display = 'block';
-        if (bookContainer) bookContainer.style.display = 'block';
-        if (book) book.style.display = 'block';
-        startWebsite();
-    } else {
-        const mediaQuery = window.matchMedia("(orientation: landscape)");
-        isLandscape = mediaQuery.matches;
+    isLandscape = true;
+    if (orientationLock) orientationLock.style.display = 'none';
+    if (matrixCanvas) matrixCanvas.style.display = 'block';
+    if (mainCanvas) mainCanvas.style.display = 'block';
 
-        if (isLandscape) {
-            orientationLock.style.display = 'none';
-            matrixCanvas.style.display = 'block';
-            mainCanvas.style.display = 'block';
-            if (bookContainer) bookContainer.style.display = 'block';
-            if (book) book.style.display = 'block';
-            startWebsite();
-
-            // ✅ FIX 2: Force resize matrix khi chuyển sang landscape
-            setTimeout(() => {
-                forceResizeMatrix();
-            }, 100);
-        } else {
-            orientationLock.style.display = 'flex';
-            matrixCanvas.style.display = 'none';
-            mainCanvas.style.display = 'none';
-            if (bookContainer) bookContainer.style.display = 'none';
-            if (book) book.style.display = 'none';
-            stopWebsite();
-        }
-
-        mediaQuery.addEventListener('change', (e) => {
-            isLandscape = e.matches;
-            if (isLandscape) {
-                orientationLock.style.display = 'none';
-                matrixCanvas.style.display = 'block';
-                mainCanvas.style.display = 'block';
-                if (bookContainer) bookContainer.style.display = 'block';
-                if (book) book.style.display = 'block';
-                startWebsite();
-
-                // ✅ FIX 3: Force resize matrix khi orientation change
-                setTimeout(() => {
-                    forceResizeMatrix();
-                }, 100);
-            } else {
-                orientationLock.style.display = 'flex';
-                matrixCanvas.style.display = 'none';
-                mainCanvas.style.display = 'none';
-                if (bookContainer) bookContainer.style.display = 'none';
-                if (book) book.style.display = 'none';
-                stopWebsite();
+    const handleOrientationResize = () => {
+        setTimeout(() => {
+            forceResizeMatrix();
+            if (S && S.Drawing && typeof S.Drawing.adjustCanvas === 'function') {
+                S.Drawing.adjustCanvas();
             }
-        });
-    }
+        }, 120);
+    };
+
+    window.addEventListener('orientationchange', handleOrientationResize);
 }
 function startWebsite() {
     if (!matrixInterval) {
@@ -241,9 +196,6 @@ function initMatrixRain() {
 S = {
     initialized: false,
     init: function () {
-        if (!isLandscape && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-            return;
-        }
         var action = window.location.href,
             i = action.indexOf('?websiteId=');
 
@@ -509,9 +461,7 @@ S.UI = (function () {
 
     return {
         simulate: function (action) {
-            if (isLandscape || !/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                performAction(action);
-            }
+            performAction(action);
         },
         reset: function (destroy) {
             reset(destroy);
@@ -675,12 +625,13 @@ S.ShapeBuilder = (function () {
     // Điều chỉnh gap dựa trên thiết bị
     function getGap() {
         const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-        if (isMobile) {
-            return 4; // Gap nhỏ hơn cho mobile = dots dày đặc hơn
-        } else {
-            return 8; // Gap vừa phải cho desktop
+        if (window.innerWidth < 500) {
+            return 3;
         }
+        if (isMobile) {
+            return 4;
+        }
+        return 8;
     }
 
     function fit() {
@@ -759,10 +710,11 @@ S.ShapeBuilder = (function () {
             const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             const isSmallScreen = window.innerWidth < 768;
             const baseFontSize = (isMobile || isSmallScreen) ? 250 : 500; // Giảm font size cho mobile
+            const widthFactor = window.innerWidth < 500 ? 0.88 : 0.8;
 
             setFontSize(baseFontSize);
             s = Math.min(baseFontSize,
-                (shapeCanvas.width / shapeContext.measureText(l).width) * 0.8 * baseFontSize,
+                (shapeCanvas.width / shapeContext.measureText(l).width) * widthFactor * baseFontSize,
                 (shapeCanvas.height / baseFontSize) * (isNumber(l) ? 0.8 : 0.35) * baseFontSize); // Giảm tỷ lệ cho mobile
 
             setFontSize(s);
@@ -1676,27 +1628,25 @@ window.debugBookImages = function() {
     });
 };
 
-// Memaksa musik menyala pada interaksi fisik pertama (Klik / Swipe) di area buku
-if (book) {
-    const forcePlayMusic = () => {
-        if (!isPlaying && birthdayAudio) {
-            // Perintah play() langsung dieksekusi saat jari menyentuh layar (tanpa setTimeout)
-            birthdayAudio.play().then(() => {
-                const musicControl = document.getElementById('musicControl');
-                if(musicControl) {
-                    musicControl.innerHTML = '⏸';
-                    musicControl.classList.add('playing');
-                    musicControl.title = 'Pause Music';
-                }
-                isPlaying = true;
-            }).catch(error => {
-                console.log("Safari memblokir:", error);
-            });
-        }
-    };
+// Автозапуск музыки при первом касании в любом месте экрана (важно для TikTok WebView / iOS Safari)
+const forcePlayMusic = (e) => {
+    if (e && e.target && e.target.closest && e.target.closest('#musicControl')) {
+        return;
+    }
+    if (!isPlaying && birthdayAudio) {
+        birthdayAudio.play().then(() => {
+            const musicControl = document.getElementById('musicControl');
+            if (musicControl) {
+                musicControl.innerHTML = '⏸';
+                musicControl.classList.add('playing');
+                musicControl.title = 'Pause Music';
+            }
+            isPlaying = true;
+        }).catch(error => {
+            console.log("Safari memblokir:", error);
+        });
+    }
+};
 
-    // Pasang 'telinga' untuk mendeteksi sentuhan pertama di Safari/iOS
-    book.addEventListener('touchstart', forcePlayMusic, { passive: true, once: true });
-    book.addEventListener('mousedown', forcePlayMusic, { once: true });
-    book.addEventListener('click', forcePlayMusic, { once: true });
-}
+document.addEventListener('touchstart', forcePlayMusic, { passive: true, once: true });
+document.addEventListener('click', forcePlayMusic, { once: true });

@@ -1587,21 +1587,11 @@ document.addEventListener('fullscreenchange', function () {
     updateFullscreenBtnVisibility();
 });
 function isLandscapeMode() {
-    return window.innerWidth > window.innerHeight;
+    return true;
 }
 
 function tryStartWebsiteWhenLandscape() {
     if (window.isWebsiteReady && typeof startWebsite === 'function') {
-        if (isLandscapeMode()) {
-            startWebsite();
-        } else {
-            // Đợi đến khi landscape mới start
-            window.addEventListener('resize', function onResize() {
-                if (isLandscapeMode()) {
-                    startWebsite();
-                    window.removeEventListener('resize', onResize);
-                }
-            });
-        }
+        startWebsite();
     }
 }
