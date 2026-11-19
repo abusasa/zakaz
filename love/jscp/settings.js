@@ -4,7 +4,7 @@ const closeModal = document.querySelector('.close');
 let pages = [];
 const applySettingsButton = document.getElementById('applySettings');
 let settings = {
-    music: 'music/music.mp3',
+    music: 'music/music.mp3?v=2',
     countdown: 3,
     matrixText: 'LOVELOVE',
     matrixColor1: '#ff69b4', // Màu pink mẫu
@@ -389,7 +389,7 @@ function resetWebsiteState() {
 function initializeDefaultSettings() {
 
     window.settings = {
-        music: './music/music.mp3',
+        music: './music/music.mp3?v=2',
         countdown: 3,
         matrixText: 'LOVELOVE',
         matrixColor1: '#ff69b4', // Màu pink mẫu
