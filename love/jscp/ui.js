@@ -75,6 +75,9 @@ function startWebsite() {
 }
 
 function stopWebsite() {
+    if (typeof stopBookAutoPlay === 'function') {
+        stopBookAutoPlay();
+    }
     if (window.Finale3D && typeof window.Finale3D.stop === 'function') {
         window.Finale3D.stop();
     }
@@ -925,6 +928,8 @@ function showBook() {
                 }, 800);
             });
         });
+
+        scheduleNextAutoFlip(5000);
     }
 
 }
@@ -944,8 +949,31 @@ const contentText = document.getElementById('contentText');
 let currentPage = 0;
 let isFlipping = false;
 let typewriterTimeout;
+let autoFlipTimeout = null;
+let pageContentRenderId = 0;
 let isBookFinished = false;
 let photoUrls = pages.filter(page => page.image).map(page => page.image);
+
+function stopBookAutoPlay() {
+    if (autoFlipTimeout) {
+        clearTimeout(autoFlipTimeout);
+        autoFlipTimeout = null;
+    }
+}
+
+function scheduleNextAutoFlip(delay = 5000) {
+    stopBookAutoPlay();
+    const bookEl = document.getElementById('book');
+    if (!bookEl || bookEl.style.display === 'none' || isBookFinished) {
+        return;
+    }
+    autoFlipTimeout = setTimeout(() => {
+        autoFlipTimeout = null;
+        if (!isBookFinished && !isFlipping && bookEl.style.display !== 'none') {
+            nextPage();
+        }
+    }, delay);
+}
 
 function showConfetti() {
     const confettiColors = ['#ff6f91', '#ff9671', '#ffc75f', '#f9f871', '#ff3c78'];
@@ -1148,6 +1176,7 @@ function checkBookFinished() {
     if (currentPage === lastPageIndex && lastPage && lastPage.classList.contains('flipped')) {
         if (!isBookFinished) {
             isBookFinished = true;
+            stopBookAutoPlay();
             const contentDisplay = document.getElementById('contentDisplay');
             if (contentDisplay) {
                 contentDisplay.classList.remove('show');
@@ -1163,6 +1192,7 @@ function checkBookFinished() {
 }
 
 function nextPage() {
+    stopBookAutoPlay();
     const totalPhysicalPages = Math.ceil(pages.length / 2);
     if (currentPage < totalPhysicalPages - 1 && !isFlipping) {
         isFlipping = true;
@@ -1193,6 +1223,7 @@ function nextPage() {
 }
 
 function prevPage() {
+    stopBookAutoPlay();
     if (currentPage > 0 && !isFlipping) {
         isFlipping = true;
         currentPage--;
@@ -1245,6 +1276,8 @@ function typewriterEffect(element, text, speed = 50) {
 }
 
 async function showPageContent() {
+    const renderId = ++pageContentRenderId;
+    stopBookAutoPlay();
     if (typewriterTimeout) {
         clearTimeout(typewriterTimeout);
     }
@@ -1266,6 +1299,9 @@ async function showPageContent() {
         await typewriterEffect(contentText, contentToShow, 30);
     } else {
         contentDisplay.classList.remove('show');
+    }
+    if (renderId === pageContentRenderId && !isBookFinished) {
+        scheduleNextAutoFlip(5000);
     }
 }
 
@@ -1497,6 +1533,7 @@ function hideStars() {
 
 // 9. Cleanup function để giải phóng memory
 function cleanup() {
+    stopBookAutoPlay();
     if (window.Finale3D && typeof window.Finale3D.stop === 'function') {
         window.Finale3D.stop();
     }

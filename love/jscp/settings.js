@@ -315,6 +315,9 @@ function resetWebsiteState() {
     }
 
     // Reset book state
+    if (typeof stopBookAutoPlay === 'function') {
+        stopBookAutoPlay();
+    }
     if (typeof currentPage !== 'undefined') {
         currentPage = 0;
     }
