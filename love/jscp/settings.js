@@ -302,6 +302,10 @@ function resetWebsiteState() {
     const photos = document.querySelectorAll('.photo');
     photos.forEach(photo => photo.remove());
 
+    if (window.Finale3D && typeof window.Finale3D.stop === 'function') {
+        window.Finale3D.stop();
+    }
+
     // Reset canvas visibility
     if (canvas) {
         canvas.style.display = 'block';

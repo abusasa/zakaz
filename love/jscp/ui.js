@@ -120,6 +120,9 @@ function startWebsite() {
 }
 
 function stopWebsite() {
+    if (window.Finale3D && typeof window.Finale3D.stop === 'function') {
+        window.Finale3D.stop();
+    }
     if (matrixInterval) {
         clearInterval(matrixInterval);
         matrixInterval = null;
@@ -1164,19 +1167,26 @@ function startHeartEffect() {
     }
 
     // Stagger effects để tránh blocking
-    requestAnimationFrame(() => {
-        setTimeout(() => {
-            showConfetti();
-        }, 100);
+    if (window.Finale3D && typeof window.Finale3D.start === 'function') {
+        window.Finale3D.start(photoUrls, {
+            captionTop: 'С Днём рождения,',
+            captionBottom: 'любимый! ❤️'
+        });
+    } else {
+        requestAnimationFrame(() => {
+            setTimeout(() => {
+                showConfetti();
+            }, 100);
 
-        setTimeout(() => {
-            showFirework();
-        }, 200);
+            setTimeout(() => {
+                showFirework();
+            }, 200);
 
-        setTimeout(() => {
-            spawnHeartPhotosCentered();
-        }, 300);
-    });
+            setTimeout(() => {
+                spawnHeartPhotosCentered();
+            }, 300);
+        });
+    }
 }
 
 function checkBookFinished() {
@@ -1437,6 +1447,7 @@ function handleSwipeEnd(deltaX, deltaY, deltaTime) {
 }
 
 document.addEventListener('keydown', (e) => {
+    if (isBookFinished) return;
     if (e.key === 'ArrowRight' || e.key === ' ') {
         e.preventDefault();
         nextPage();
@@ -1534,6 +1545,9 @@ function hideStars() {
 
 // 9. Cleanup function để giải phóng memory
 function cleanup() {
+    if (window.Finale3D && typeof window.Finale3D.stop === 'function') {
+        window.Finale3D.stop();
+    }
     // Clear timeouts
     if (typewriterTimeout) {
         clearTimeout(typewriterTimeout);

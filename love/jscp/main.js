@@ -1556,7 +1556,7 @@ class PricingCalculator {
                 ${t('thanks')}
             </span>
         </div>
-        <a href="https://www.tiktok.com/@iamtritoan?is_from_webapp=1&sender_device=pc" target="_blank" style="
+        <a href="https://www.tiktok.com/@abuzxc67" target="_blank" style="
             display: inline-block;
             margin-top: 4px;
             background: linear-gradient(90deg,#ff0050,#00f2ea 80%);
